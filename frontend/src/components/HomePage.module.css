@@ -1,0 +1,221 @@
+.page {
+  padding: 0 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.loading, .error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  font-size: 1rem;
+  color: #a89f90;
+}
+.error { color: #c65d3b; }
+
+/* Hero */
+.hero {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 220px;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1.5rem;
+}
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+.heroContent {
+  position: relative;
+  padding: 1.75rem;
+  color: #fff;
+}
+.heroBadge {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: rgba(255,255,255,0.2);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.heroTitle {
+  font-family: 'Fraunces', serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+.heroSub {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.8);
+  margin-top: 0.25rem;
+}
+
+/* Pills */
+.pills {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.pill {
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.15s;
+}
+.pillActive {
+  background: #c65d3b;
+  color: #fff;
+  border-color: #c65d3b;
+}
+.pillInactive {
+  background: #fff;
+  color: #6b6357;
+  border-color: #eae5db;
+}
+.pillInactive:hover {
+  background: #f4ede2;
+}
+
+/* Section header */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.sectionTitle {
+  font-family: 'Fraunces', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2b2620;
+}
+.viewAll {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: #c65d3b;
+  text-decoration: none;
+}
+.viewAll:hover { text-decoration: underline; }
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .grid { grid-template-columns: 1fr; }
+  .page { padding: 0 1rem 1rem; }
+  .hero { height: 180px; }
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #eae5db;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s;
+}
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.card:hover .cardTitle {
+  color: #c65d3b;
+}
+.cardImage {
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+}
+.cardBody {
+  padding: 1rem;
+}
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: #a89f90;
+  margin-bottom: 4px;
+}
+.cardTitle {
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.15s;
+}
+.cardRating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: #c65d3b;
+}
+
+/* Meal plan */
+.mealGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  .mealGrid { grid-template-columns: repeat(2, 1fr); }
+}
+.mealCard {
+  background: #fff;
+  border: 1px solid #eae5db;
+  border-radius: 12px;
+  padding: 1rem;
+}
+.mealType {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #c65d3b;
+  font-weight: 600;
+}
+.mealDate {
+  font-size: 0.8rem;
+  color: #a89f90;
+  margin-top: 2px;
+}
+.mealRecipe {
+  font-weight: 500;
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+.empty {
+  text-align: center;
+  padding: 3rem;
+  color: #a89f90;
+}
+.linkAccent {
+  color: #c65d3b;
+  text-decoration: underline;
+}
+
+.footer {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eae5db;
+  font-size: 0.85rem;
+  color: #a89f90;
+}

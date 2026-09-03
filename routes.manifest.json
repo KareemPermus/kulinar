@@ -1,0 +1,90 @@
+[
+  {
+    "auth_required": false,
+    "method": "GET",
+    "path": "/api/recipes",
+    "response_shape": [
+      {
+        "category": "string",
+        "cook_time": "int",
+        "created_at": "string",
+        "description": "string",
+        "id": "int",
+        "image_url": "string",
+        "prep_time": "int",
+        "servings": "int",
+        "title": "string"
+      }
+    ],
+    "sample_body": null,
+    "sample_params": {},
+    "success_status": 200
+  },
+  {
+    "auth_required": false,
+    "method": "GET",
+    "path": "/api/recipes/:id",
+    "response_shape": {
+      "category": "string",
+      "cook_time": "int",
+      "created_at": "string",
+      "description": "string",
+      "id": "int",
+      "image_url": "string",
+      "ingredients": "array",
+      "prep_time": "int",
+      "servings": "int",
+      "steps": "array",
+      "title": "string"
+    },
+    "sample_body": null,
+    "sample_params": {
+      "id": 1
+    },
+    "success_status": 200
+  },
+  {
+    "auth_required": false,
+    "method": "GET",
+    "path": "/api/meal-plans",
+    "response_shape": [
+      {
+        "date": "string",
+        "id": "int",
+        "meal_type": "string",
+        "recipe": {
+          "id": "int",
+          "image_url": "string",
+          "title": "string"
+        },
+        "recipe_id": "int"
+      }
+    ],
+    "sample_body": null,
+    "sample_params": {},
+    "success_status": 200
+  },
+  {
+    "auth_required": false,
+    "method": "GET",
+    "path": "/api/health",
+    "response_shape": {
+      "status": "string"
+    },
+    "sample_body": null,
+    "sample_params": {},
+    "success_status": 200
+  },
+  {
+    "auth_required": false,
+    "method": "GET",
+    "path": "/api/meal-plans/:id",
+    "request_body": null,
+    "response_shape": null,
+    "sample_body": null,
+    "sample_params": {
+      "id": 1
+    },
+    "success_status": 200
+  }
+]
